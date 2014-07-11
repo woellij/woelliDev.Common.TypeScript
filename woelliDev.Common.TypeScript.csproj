@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{68205B3E-5B14-4A30-BA2A-CEB75FB75F3F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>woelliDev.Common.TypeScript</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1246</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1246/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="crossroads.d.ts" />
+    <TypeScriptCompile Include="Events\Event.ts" />
+    <TypeScriptCompile Include="helpers\nodeHelper.ts" />
+    <TypeScriptCompile Include="history.d.ts" />
+    <TypeScriptCompile Include="jquery.d.ts" />
+    <TypeScriptCompile Include="js-signals.d.ts" />
+    <TypeScriptCompile Include="knockout.d.ts" />
+    <TypeScriptCompile Include="helpers\InstanceLoader.ts" />
+    <TypeScriptCompile Include="Presenting\loader.ts" />
+    <TypeScriptCompile Include="Presenting\modal.ts" />
+    <TypeScriptCompile Include="Presenting\presenter.ts" />
+    <TypeScriptCompile Include="Presenting\presenting.d.ts" />
+    <TypeScriptCompile Include="Presenting\presenting.ts" />
+    <TypeScriptCompile Include="Presenting\routing.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="common_bundle.js">
+      <DependentUpon>common_bundle.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="common_bundle.min.js">
+      <DependentUpon>common_bundle.js</DependentUpon>
+    </Content>
+    <Content Include="helpers\helpers_bundle.js">
+      <DependentUpon>helpers_bundle.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="helpers\helpers_bundle.min.js">
+      <DependentUpon>helpers_bundle.js</DependentUpon>
+    </Content>
+    <Content Include="Presenting\libs\crossroads.0.12.0.js" />
+    <Content Include="Presenting\libs\history.js" />
+    <Content Include="Presenting\libs\js-signals.js" />
+    <Content Include="Presenting\libs\libs.js">
+      <DependentUpon>libs.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="Presenting\libs\libs.min.js">
+      <DependentUpon>libs.js</DependentUpon>
+    </Content>
+    <Content Include="Presenting\presenting_bundle.js">
+      <DependentUpon>presenting_bundle.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="Presenting\presenting_bundle.min.js">
+      <DependentUpon>presenting_bundle.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Presenting\libs\libs.js.bundle" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Presenting\libs\libs.min.js.map">
+      <DependentUpon>libs.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Presenting\presenting_bundle.js.bundle" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Presenting\presenting_bundle.min.js.map">
+      <DependentUpon>presenting_bundle.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="common_bundle.js.bundle">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="common_bundle.min.js.map">
+      <DependentUpon>common_bundle.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="helpers\helpers_bundle.js.bundle" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="helpers\helpers_bundle.min.js.map">
+      <DependentUpon>helpers_bundle.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>

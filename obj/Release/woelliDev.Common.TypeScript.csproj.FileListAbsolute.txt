@@ -1,0 +1,5 @@
+C:\Users\woelli\Documents\Visual Studio 2013\Projects\StickerIndex\woelliDev.Common.TypeScript\bin\woelliDev.Common.TypeScript.dll
+C:\Users\woelli\Documents\Visual Studio 2013\Projects\StickerIndex\woelliDev.Common.TypeScript\bin\woelliDev.Common.TypeScript.pdb
+C:\Users\woelli\Documents\Visual Studio 2013\Projects\StickerIndex\woelliDev.Common.TypeScript\obj\Release\woelliDev.Common.TypeScript.csprojResolveAssemblyReference.cache
+C:\Users\woelli\Documents\Visual Studio 2013\Projects\StickerIndex\woelliDev.Common.TypeScript\obj\Release\woelliDev.Common.TypeScript.dll
+C:\Users\woelli\Documents\Visual Studio 2013\Projects\StickerIndex\woelliDev.Common.TypeScript\obj\Release\woelliDev.Common.TypeScript.pdb
